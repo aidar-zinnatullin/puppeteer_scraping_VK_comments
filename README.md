@@ -28,6 +28,8 @@ More details about the library are here, [Puppeteer Documentation](https://pptr.
 
 ##### **Few comments / suggestions about VK**
 
+My approach to scraping the VK platform was not good enough. There are two important points that I have to emphasize if you want to use this approach in the future:
+
 1. VK may block repeated requests, therefore, it makes sense to implement delays using `page.waitForTimeout()`, which I did not do in the script for downloading HTML-pages.
 
    ```javascript
