@@ -39,8 +39,10 @@ I did not use proxies, but it is not a smart decision. To avoid IP bans, you can
 
 ### **Additional Resources**
 
-- [VK API Documentation](https://dev.vk.com/en)
+- Brandon Morelli, [A Guide to Automating & Scraping the Web with JavaScript (Chrome + Puppeteer + Node JS)](https://codeburst.io/a-guide-to-automating-scraping-the-web-with-javascript-chrome-puppeteer-node-js-b18efb9e9921), this resource inspired me to experiment with Puppeteer
+- [Puppeteer Documentation](https://pptr.dev/)
 - [Node.js Official Site](https://nodejs.org/) 
 - [rvest](https://rvest.tidyverse.org)
+- [VK API Documentation](https://dev.vk.com/en)
 - [stackoverflow](https://stackoverflow.com)
 - [ChatGPT](https://chatgpt.com)
