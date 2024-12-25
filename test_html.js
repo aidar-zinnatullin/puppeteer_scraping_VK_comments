@@ -4,13 +4,14 @@ import csvParser from 'csv-parser';
 import puppeteer from 'puppeteer';
 
 const linkCSV = 'check_urls.csv';
+
+// Here, I set my VK email login as an environment variable. 
+// in the terminal: export VK_USERNAME='my_email'
 const VK_USERNAME = process.env.VK_USERNAME;
 
 // folder for collecting HTMLs
 const HTML_FOLDER = 'collected_html';
-
 const leftoverJSON = 'leftovers.json';
-
 if (!fs.existsSync(HTML_FOLDER)) {
   fs.mkdirSync(HTML_FOLDER, { recursive: true });
 }
@@ -92,7 +93,7 @@ await loginPage.close();
       
       results.push({ url: link, savedHTML: htmlFilePath });
     } catch (err) {
-      console.error(`Error processing ${link}: ${err.message}`);
+      console.error(`Error at ${link}: ${err.message}`);
     }
   }
 
@@ -101,5 +102,5 @@ await loginPage.close();
 
   
   fs.writeFileSync(leftoverJSON, JSON.stringify(results, null, 2), 'utf8');
-  console.log(`Data has been saved to ${leftoverJSON}`);
+  console.log(`Comments have been saved to ${leftoverJSON}`);
 })();
