@@ -2,7 +2,7 @@
 
 #### **What is the use case, and why does it matter?**
 
-VK's API does not allow access to comments from sub-threads. It can significantly distort the analysis of the discussion's content and dynamics with reliance on this official method. Therefore, I decided to collect comments using web scraping. The initial option based on Selenium, i.e., through simulating the behavior of a platform user, seemed too cumbersome. As an alternative, I implemented the strategy of (1) downloading the HTML pages (in the script `test _html.js`, they are presented through a reference to a CSV file) and (2) then going through them using the `rvest` package in R.
+VK's API does not allow access to comments from sub-threads. It can significantly distort the analysis of the discussion's content and dynamics with reliance on this official method. Therefore, I decided to collect comments using web scraping. The initial option based on Selenium, i.e., through simulating the behavior of a platform user, seemed too cumbersome. As an alternative, I implemented the strategy of (1) downloading the HTML pages (in the script `test_html.js`, they are presented through a reference to a CSV file) and (2) then going through them using the `rvest` package in R.
 
 Thanks to Puppeteer, I could get the whole HTML source of the required pages.
 
@@ -47,3 +47,4 @@ More details about the library are here, [Puppeteer Documentation](https://pptr.
 
 - [VK API Documentation](https://dev.vk.com/en)
 - [Node.js Official Site](https://nodejs.org/) 
+- [rvest](https://rvest.tidyverse.org)
